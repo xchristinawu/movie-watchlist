@@ -18,7 +18,7 @@ function getSearchBarValue() {
 // stored in searchResults 
 async function search() {
     try {
-        const response = await fetch(`http://www.omdbapi.com/?apikey=7221b58b&s=${searchBarValue}&r=json`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=7221b58b&s=${searchBarValue}&r=json`);
         const data = await response.json();
         const searchResults = data.Search;
         getFilmHtml(searchResults);
@@ -70,7 +70,7 @@ function getFilmHtml(searchResults) {
 
 // use imdbID to get more details
 async function searchByFilm(imdbID) {
-    const res = await fetch(`http://www.omdbapi.com/?apikey=7221b58b&i=${imdbID}&r=json`);
+    const res = await fetch(`https://www.omdbapi.com/?apikey=7221b58b&i=${imdbID}&r=json`);
     const movie = await res.json();
     // ratings in 0.0/10 format (take first 3 nums with substring)
     return {title: movie.Title,

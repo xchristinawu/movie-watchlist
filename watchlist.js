@@ -3,7 +3,7 @@ function getWatchlist(){
     for (let i = 0; i < localStorage.length; i++) {
         let key = localStorage.key(i);
         console.log(localStorage.getItem(key));
-        fetch(`http://www.omdbapi.com/?apikey=7221b58b&i=${key}&r=json`)
+        fetch(`https://www.omdbapi.com/?apikey=7221b58b&i=${key}&r=json`)
             .then(res => res.json())
             .then(film => {
                 html += `

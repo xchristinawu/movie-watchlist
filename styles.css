@@ -245,6 +245,11 @@ p {
     text-align: center;
 }
 
+.add-btn,
+.remove-btn {
+    color: #000000;
+}
+
 .runtime,
 .genre {
     font-size: .95rem; /*prevent section from collapsing when +watchlist clicked*/
